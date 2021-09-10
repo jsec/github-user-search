@@ -1,12 +1,15 @@
 {
-  "name": "gh-user-search",
+  "name": "github-user-search",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --sourceMap=false --base-href /github-user-search/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +39,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "puppeteer": "^10.2.0",
     "typescript": "~4.3.5"
   }
 }

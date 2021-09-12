@@ -1,0 +1,8 @@
+.user-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}

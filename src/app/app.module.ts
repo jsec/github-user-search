@@ -13,9 +13,6 @@ import {
 } from '@angular/platform-browser/animations';
 
 import {
-  AppRoutingModule
-} from './app-routing.module';
-import {
   AppComponent
 } from './app.component';
 import {
@@ -37,7 +34,6 @@ import {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     SearchBarModule,

@@ -4,5 +4,5 @@ export interface IUser {
   starCount: number;
   followerCount: number;
   avatarUrl: string;
-  description: string;
+  bio: string;
 }

@@ -1,34 +1,26 @@
 <mat-card class="mat-elevation-z8">
+  <div *ngIf="this.searchResults.count" class="search-result-navigation">
+    <h3 class="previous-url">
+      <div *ngIf="this.searchResults.previousPageUrl" (click)="goToPreviousPage()">< Previous Page</div>
+    </h3>
+    <h3 class="result-count">User Count: {{searchResults.count}}</h3>
+    <h3 class="next-url">
+      <div *ngIf="this.searchResults.nextPageUrl" (click)="goToNextPage()">Next Page ></div>
+    </h3>
+  </div>
   <mat-card-content class="user-list">
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
+    <div *ngIf="this.searchResults.count; then userList else emptyMessage"></div>
   </mat-card-content>
 </mat-card>
+
+<ng-template #userList>
+  <ng-container *ngFor="let user of searchResults.users">
+    <user-card [user]="user"></user-card>
+  </ng-container>
+</ng-template>
+
+<ng-template #emptyMessage>
+  <div>
+    Wow such empty
+  </div>
+</ng-template>

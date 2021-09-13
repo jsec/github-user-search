@@ -1,4 +1,7 @@
 import {
+  CommonModule
+} from '@angular/common';
+import {
   NgModule
 } from '@angular/core';
 import {
@@ -17,6 +20,7 @@ import {
     SearchResultsComponent
   ],
   imports: [
+    CommonModule,
     MatCardModule,
     UserCardModule
   ],

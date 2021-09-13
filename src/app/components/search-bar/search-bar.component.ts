@@ -7,6 +7,10 @@ import {
   FormControl
 } from '@angular/forms';
 
+import {
+  GithubApiService
+} from '../../services/github-api.service';
+
 @Component({
   selector: 'search-bar',
   templateUrl: 'search-bar.component.html',
@@ -14,11 +18,13 @@ import {
 })
 export class SearchBarComponent {
   @Output() searchText = new EventEmitter<string>();
-
   public searchControl: FormControl = new FormControl();
 
+  constructor(
+    private _apiService: GithubApiService
+  ) {}
+
   public search(): void {
-    console.log(this.searchControl.value);
-    this.searchText.emit(this.searchControl.value);
+    this._apiService.getUsers(this.searchControl.value);
   }
 }

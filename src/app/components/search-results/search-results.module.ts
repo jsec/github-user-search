@@ -7,6 +7,9 @@ import {
 import {
   MatCardModule
 } from '@angular/material/card';
+import {
+  MatDividerModule
+} from '@angular/material/divider';
 
 import {
   UserCardModule
@@ -22,6 +25,7 @@ import {
   imports: [
     CommonModule,
     MatCardModule,
+    MatDividerModule,
     UserCardModule
   ],
   exports: [

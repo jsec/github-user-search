@@ -8,6 +8,7 @@
       <div *ngIf="this.searchResults.nextPageUrl" (click)="goToNextPage()">Next Page ></div>
     </h3>
   </div>
+  <mat-divider *ngIf="this.searchResults.count"></mat-divider>
   <mat-card-content class="user-list">
     <div *ngIf="this.searchResults.count; then userList else emptyMessage"></div>
   </mat-card-content>

@@ -7,13 +7,18 @@ import {
   MatDialogRef
 } from '@angular/material/dialog';
 
+import {
+  IUser
+} from '../../interfaces/user.interface';
+
 @Component({
   selector: 'user-info-dialog',
-  templateUrl: 'user-info-dialog.component.html'
+  templateUrl: 'user-info-dialog.component.html',
+  styleUrls: ['user-info-dialog.component.scss']
 })
 export class UserInfoDialogComponent {
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: IUser,
     public dialogRef: MatDialogRef<UserInfoDialogComponent>
   ) {}
 

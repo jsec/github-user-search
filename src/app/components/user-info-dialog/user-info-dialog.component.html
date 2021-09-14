@@ -1,8 +1,43 @@
-<div mat-dialog-title>Bob Jones</div>
-<mat-dialog-content>
-  Some content
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button (click)="goToProfile()">GO TO PROFILE</button>
-  <button mat-button mat-dialog-close>CLOSE</button>
-</mat-dialog-actions>
+<div class="dialog-content">
+  <mat-dialog-content>
+    <div class="user-content">
+      <img mat-card-avatar class="avatar-image" src={{data.avatarUrl}}>
+      <div *ngIf="data.name; then nameExists else nameMissing"></div>
+      <div>{{data.bio}}</div>
+      <mat-list class="user-info-list">
+        <mat-list-item *ngIf="data.location">
+          <div mat-line class="bio-header">Location</div>
+          <div mat-line>{{data.location}}</div>
+        </mat-list-item>
+        <mat-list-item *ngIf="data.company">
+          <div mat-line class="bio-header">Company</div>
+          <div mat-line>{{data.company}}</div>
+        </mat-list-item>
+        <mat-list-item *ngIf="data.repoCount">
+          <div mat-line class="bio-header">Repos</div>
+          <div mat-line>{{data.repoCount}}</div>
+        </mat-list-item>
+        <mat-list-item>
+          <div mat-line class="bio-header">Followers</div>
+          <div mat-line>{{data.followerCount}}</div>
+        </mat-list-item>
+        <mat-list-item>
+          <div mat-line class="bio-header">Following</div>
+          <div mat-line>{{data.followingCount}}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="goToProfile()">GO TO PROFILE</button>
+    <button mat-button mat-dialog-close>CLOSE</button>
+  </mat-dialog-actions>
+</div>
+
+<ng-template #nameExists>
+  <div mat-dialog-title>{{data.name}} ({{data.username}})</div>
+</ng-template>
+
+<ng-template #nameMissing>
+  <div mat-dialog-title>{{data.username}}</div>
+</ng-template>

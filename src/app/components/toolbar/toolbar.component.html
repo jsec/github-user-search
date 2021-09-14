@@ -4,12 +4,14 @@
     <mat-form-field appearance="fill" floatLabel="never" class="search-input">
       <input matInput type="search" name="search-bar" (keyup.enter)="search()" [formControl]="searchControl" placeholder="Search Users" autocomplete="off">
     </mat-form-field>
-    <button mat-raised-button class="search-button">
+    <button mat-raised-button (click)="search()" class="search-button">
       <mat-icon matSuffix>search</mat-icon>
       Search
     </button>
   </span>
   <span class="repo-link">
-    Something
+    <a target="_blank" [attr.href]="GITHUB_PROJECT_LINK">
+      <img src="assets/img/GitHub-Mark-32px.png">
+    </a>
   </span>
 </mat-toolbar>

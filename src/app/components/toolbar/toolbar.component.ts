@@ -17,6 +17,7 @@ import {
   styleUrls: ['toolbar.component.scss']
 })
 export class ToolbarComponent {
+  public readonly GITHUB_PROJECT_LINK: string = "https://github.com/jsec/github-user-search";
   public searchControl: FormControl = new FormControl();
 
   constructor(
@@ -25,15 +26,16 @@ export class ToolbarComponent {
   ) {}
 
   public search(): void {
-    const searchText = this.searchControl.value;
+    const searchText = this.searchControl.value as string;
 
-    if (!searchText) {
+    if (!searchText?.trim()) {
       this._snackBar.open('Search cannot be blank. Please enter a search term.', 'Dismiss', {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
         duration: 5000
       });
 
+      this.searchControl.setValue(null);
       return;
     }
 

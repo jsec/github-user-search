@@ -25,10 +25,9 @@ export class UserCardComponent {
     private _dialog: MatDialog
   ) {}
 
-  public goToProfile(): void {
+  public openUserDialog(): void {
     this._dialog.open(UserInfoDialogComponent, {
-      height: '500px',
-      width: '500px'
+      data: this.user
     });
   }
 }

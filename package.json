@@ -6,7 +6,7 @@
     "config": "npx ts-node ./src/config/config.ts",
     "start": "npm run config && ng serve",
     "build": "ng build",
-    "build:prod": "ng build --sourceMap=false --base-href /github-user-search/",
+    "build:prod": "npm run config && ng build --sourceMap=false --base-href /github-user-search/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",

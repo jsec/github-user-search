@@ -23,6 +23,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "parse-link-header"
+            ],
             "outputPath": "dist/github-user-search",
             "index": "src/index.html",
             "main": "src/main.ts",

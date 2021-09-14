@@ -16,9 +16,6 @@ import {
   AppComponent
 } from './app.component';
 import {
-  SearchBarModule
-} from './components/search-bar/search-bar.module';
-import {
   SearchResultsModule
 } from './components/search-results/search-results.module';
 import {
@@ -36,7 +33,6 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SearchBarModule,
     SearchResultsModule,
     ToolbarModule,
   ],

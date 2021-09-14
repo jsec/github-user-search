@@ -29,10 +29,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this._subscriptions.push(this._apiService.searchResults$.subscribe({
-      next: (results) => {
-        console.log(results);
-        this.searchResults = results;
-      }
+      next: (results) => this.searchResults = results
     }));
   }
 

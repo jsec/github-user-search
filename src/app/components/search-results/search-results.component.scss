@@ -29,4 +29,9 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   padding-top: 20px;
+  min-height: 60%;
+}
+
+.pagination-link {
+  cursor: pointer;
 }

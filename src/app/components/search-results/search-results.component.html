@@ -5,11 +5,11 @@
 <ng-template #userList>
   <div class="search-result-navigation">
     <h3 class="previous-url">
-      <div *ngIf="searchResults.previousPageUrl" (click)="goToPreviousPage()">< Previous Page</div>
+      <div class="pagination-link" *ngIf="searchResults.previousPageUrl" (click)="goToPreviousPage()">< Previous Page</div>
     </h3>
     <h3 class="result-count">User Count: {{searchResults.count}}</h3>
     <h3 class="next-url">
-      <div *ngIf="searchResults.nextPageUrl" (click)="goToNextPage()">Next Page ></div>
+      <div class="pagination-link" *ngIf="searchResults.nextPageUrl" (click)="goToNextPage()">Next Page ></div>
     </h3>
   </div>
   <mat-divider></mat-divider>

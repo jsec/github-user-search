@@ -21,8 +21,4 @@ export class UserInfoDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: IUser,
     public dialogRef: MatDialogRef<UserInfoDialogComponent>
   ) {}
-
-  public goToProfile(): void {
-    console.log('going to profile');
-  }
 }

@@ -8,4 +8,5 @@ export interface IUser {
   company: string;
   location: string
   followingCount: number;
+  profileUrl: string;
 }

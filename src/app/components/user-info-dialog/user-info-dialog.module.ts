@@ -14,6 +14,9 @@ import {
   MatDialogModule
 } from '@angular/material/dialog';
 import {
+  MatDividerModule
+} from '@angular/material/divider';
+import {
   MatListModule
 } from '@angular/material/list';
 
@@ -30,6 +33,7 @@ import {
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
+    MatDividerModule,
     MatListModule
   ],
   exports: [

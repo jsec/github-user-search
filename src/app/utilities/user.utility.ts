@@ -16,6 +16,7 @@ export function getUserFromGithubUserObject(userObj: IGithubUserObject) {
     company: userObj.company,
     location: userObj.location,
     repoCount: userObj.public_repos,
-    followingCount: userObj.following
+    followingCount: userObj.following,
+    profileUrl: userObj.html_url
   }
 }

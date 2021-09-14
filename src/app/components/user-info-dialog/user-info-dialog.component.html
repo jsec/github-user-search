@@ -28,8 +28,11 @@
       </mat-list>
     </div>
   </mat-dialog-content>
+  <mat-divider></mat-divider>
   <mat-dialog-actions align="end">
-    <button mat-button (click)="goToProfile()">GO TO PROFILE</button>
+    <a href={{data.profileUrl}} target="_blank">
+      <button mat-button>GO TO PROFILE</button>
+    </a>
     <button mat-button mat-dialog-close>CLOSE</button>
   </mat-dialog-actions>
 </div>

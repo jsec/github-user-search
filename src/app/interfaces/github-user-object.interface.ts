@@ -8,4 +8,5 @@ export interface IGithubUserObject {
   company: string;
   public_repos: number;
   location: string;
+  html_url: string;
 }

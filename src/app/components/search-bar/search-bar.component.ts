@@ -6,6 +6,9 @@ import {
 import {
   FormControl
 } from '@angular/forms';
+import {
+  MatSnackBar
+} from '@angular/material/snack-bar';
 
 import {
   GithubApiService
@@ -21,10 +24,23 @@ export class SearchBarComponent {
   public searchControl: FormControl = new FormControl();
 
   constructor(
-    private _apiService: GithubApiService
+    private _apiService: GithubApiService,
+    private _snackBar: MatSnackBar
   ) {}
 
   public search(): void {
+    const searchText = this.searchControl.value;
+
+    if (!searchText) {
+      this._snackBar.open('Search cannot be blank. Please enter a search term.', 'Dismiss', {
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+        duration: 5000
+      });
+
+      return;
+    }
+
     this._apiService.getUsers(this.searchControl.value);
   }
 }

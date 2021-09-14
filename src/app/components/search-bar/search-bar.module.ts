@@ -19,6 +19,9 @@ import {
 import {
   MatInputModule
 } from '@angular/material/input';
+import {
+  MatSnackBarModule
+} from '@angular/material/snack-bar';
 
 import {
   SearchBarComponent
@@ -34,6 +37,7 @@ import {
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatSnackBarModule,
     ReactiveFormsModule
   ],
   exports: [

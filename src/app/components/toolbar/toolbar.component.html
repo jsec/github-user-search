@@ -1,3 +1,15 @@
 <mat-toolbar color="primary">
-  <span>GitHub User Search</span>
+  <span class="app-title">GitHub User Search</span>
+  <span class="search-field">
+    <mat-form-field appearance="fill" floatLabel="never" class="search-input">
+      <input matInput type="search" name="search-bar" (keyup.enter)="search()" [formControl]="searchControl" placeholder="Search Users" autocomplete="off">
+    </mat-form-field>
+    <button mat-raised-button class="search-button">
+      <mat-icon matSuffix>search</mat-icon>
+      Search
+    </button>
+  </span>
+  <span class="repo-link">
+    Something
+  </span>
 </mat-toolbar>

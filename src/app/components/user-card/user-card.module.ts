@@ -1,4 +1,7 @@
 import {
+  CommonModule
+} from '@angular/common';
+import {
   NgModule
 } from '@angular/core';
 import {
@@ -23,6 +26,7 @@ import {
     UserCardComponent
   ],
   imports: [
+    CommonModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,

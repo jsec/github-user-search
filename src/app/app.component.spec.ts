@@ -10,7 +10,7 @@ import {
 } from './app.component';
 import {
   generateTestComponent
-} from './helpers/test.helpers';
+} from './utilities/testing.utility';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

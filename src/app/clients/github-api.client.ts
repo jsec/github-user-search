@@ -44,7 +44,6 @@ export class GithubApiClient {
   private getHeaders(): HttpHeaders {
     return new HttpHeaders()
       .set('Accept', 'application/vnd.github.v3+json')
-      .set('Authorization', `token ${environment.GITHUB_AUTH_TOKEN}`)
-      // .set('Authorization', `token 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`);
+      .set('Authorization', `token ${environment.GITHUB_AUTH_TOKEN}`);
   }
 }

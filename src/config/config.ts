@@ -1,3 +1,5 @@
+// borrowed from https://betterprogramming.pub/how-to-secure-angular-environment-variables-for-use-in-github-actions-39c07587d590
+
 const fs = require('fs');
 
 require('dotenv').config();

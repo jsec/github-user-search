@@ -37,12 +37,14 @@ import {
 
 @Injectable({ providedIn: 'root' })
 export class GithubApiService {
-  public searchResults$: BehaviorSubject<ISearchResults> = new BehaviorSubject<ISearchResults>(<ISearchResults>{});
+  public searchResults$: BehaviorSubject<ISearchResults>;
 
   constructor(
     private _githubClient: GithubApiClient,
     private _spinnerService: LoadingSpinnerService
-  ) {}
+  ) {
+    this.searchResults$ = new BehaviorSubject<ISearchResults>(<ISearchResults>{});
+  }
 
   public getUsers(searchText: string): void {
     const obs = this._githubClient.searchUsers(searchText);

@@ -1,27 +1,23 @@
-# GhUserSearch
+# GitHub User Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+An exercise in putting my own twist on the GitHub user search APIs.
 
-## Development server
+Demo can be found here: [https://jsec-github-user-search.netlify.app/](https://jsec-github-user-search.netlify.app/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Running Locally
 
-## Code scaffolding
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+--NOTE-- You will need to provide a GitHub OAuth token for interacting with the API, and provide it as an environment variable. Details can be found [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Things I Wish I Had More Time To Work On
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- A more comprehensive unit test suite
+- Updating the loading spinner overlay so it only spans over the result list rather than the entire search results div
+- Sorting by follower count/repo count/stars, etc. This would have required the switch over to the V4 GraphQL API, which there wasn't time for
+- Light mode/dark mode

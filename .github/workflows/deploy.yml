@@ -32,13 +32,14 @@ jobs:
 
       # Build production bundles
       - name: Create bundles
+        env:
+          ENVIRONMENT: production
+          GITHUB_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: npm run build:prod
 
       # Deploy to gh-pages branch
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
-        env:
-          GITHUB_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         with:
           branch: gh-pages
           folder: dist/github-user-search

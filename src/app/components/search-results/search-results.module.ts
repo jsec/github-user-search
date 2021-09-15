@@ -10,6 +10,9 @@ import {
 import {
   MatDividerModule
 } from '@angular/material/divider';
+import {
+  MatProgressSpinnerModule
+} from '@angular/material/progress-spinner';
 
 import {
   UserCardModule
@@ -26,6 +29,7 @@ import {
     CommonModule,
     MatCardModule,
     MatDividerModule,
+    MatProgressSpinnerModule,
     UserCardModule
   ],
   exports: [

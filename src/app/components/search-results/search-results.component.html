@@ -1,6 +1,10 @@
 <mat-card class="mat-elevation-z0">
-  <div *ngIf="searchResults.count; then userList else emptyMessage"></div>
+  <div *ngIf="isLoading; then loading else resultList"></div>
 </mat-card>
+
+<ng-template #resultList>
+  <div *ngIf="searchResults.count; then userList else emptyMessage"></div>
+</ng-template>
 
 <ng-template #userList>
   <div class="search-result-navigation">
@@ -25,4 +29,16 @@
     <img src="assets/img/no-results-icon.png">
     <h3>No search results available. Enter a search term or try refining your search.</h3>
   </div>
+</ng-template>
+
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+
+<ng-template #userList>
+  <ng-container *ngFor="let user of searchResults.users">
+    <user-card [user]="user"></user-card>
+  </ng-container>
 </ng-template>

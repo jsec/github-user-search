@@ -3,6 +3,13 @@ mat-card {
   background-color: #212121;
 }
 
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 20px);
+}
+
 .search-result-navigation {
   width: 100%;
   display: flex;
@@ -31,6 +38,7 @@ mat-card {
   height: 75%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
   grid-auto-rows: 2fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;

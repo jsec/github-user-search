@@ -1,5 +1,4 @@
 mat-card {
-  height: 90%;
   background-color: #212121;
 }
 
@@ -35,10 +34,8 @@ mat-card {
 
 .user-list {
   width: 100%;
-  height: 75%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto;
   grid-auto-rows: 2fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;

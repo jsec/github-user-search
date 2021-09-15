@@ -14,12 +14,10 @@ export class LoadingSpinnerService {
   }
 
   public show(): void {
-    console.log('is loading');
     this.isLoading$.next(true);
   }
 
   public hide(): void {
-    console.log('is done loading');
     this.isLoading$.next(false);
   }
 }

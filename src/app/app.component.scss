@@ -1,15 +1,19 @@
 .container {
+  height: 100%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 1%;
   display: grid;
   grid-template-columns: 95%;
-  grid-template-rows: auto auto;
   grid-column-gap: 20px;
   gap: 20px 20px;
   justify-items: stretch;
 }
 
 .content {
+  height: 100%;
+}
+
+search-results {
   height: 100%;
 }
